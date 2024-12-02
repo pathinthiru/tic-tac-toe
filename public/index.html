@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Tic Tac Toe Game</h1>
+    <div id="qr-container">
+      <h2>Scan to Play!</h2>
+      <img id="qr-code" src="" alt="QR Code" />
+    </div>
+    <button id="start-button">Start Game</button>
+  </div>
+
+  <script>
+    // Fetch the QR code from the server and display it
+    fetch('/qr')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('qr-code').src = data.qrCode;
+      });
+
+    // Start game button action
+    document.getElementById('start-button').addEventListener('click', () => {
+      alert("Game Starting!");
+      // Implement game logic here (e.g., redirect to game screen or initialize game)
+    });
+  </script>
+</body>
+</html>

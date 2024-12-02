@@ -1,0 +1,30 @@
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+  }
+  
+  .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  #start-game {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+  }
+  
+  #qr-code {
+    margin-top: 20px;
+  }
+  
